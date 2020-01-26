@@ -21,7 +21,15 @@ namespace GrafFeladat_CSharp_HSZ
             graf.Hozzaad(2, 4);
 
             Console.WriteLine(graf);
-            graf.SzelessegiBejar(4);
+            graf.SzelessegiBejar(1);
+            Console.WriteLine("-");
+            graf.MelysegiBejar(6);
+            Console.WriteLine(graf.Osszefuggo());
+            Dictionary<int, int> szinezes = graf.MohoSzinezes();
+            foreach (var item in szinezes)
+            {
+                Console.WriteLine(item.Key + " " + item.Value);
+            }
             Console.ReadLine();
         }
     }
